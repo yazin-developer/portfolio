@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Yasin Ullakhan A — Cyber Security student, game developer & simulation builder based in Chennai, India." />
+  <meta name="keywords" content="Yasin Ullakhan, cyber security, game developer, simulation, portfolio, Chennai" />
+  <meta property="og:title" content="Yasin Ullakhan A — Portfolio" />
+  <meta property="og:description"
+    content="Cyber Security student who builds games, simulations, and digital experiences." />
+  <meta property="og:type" content="website" />
+  <title>Yasin Ullakhan A — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+
+<body>
+  <!-- Cyber Scanline -->
+  <div class="scanline"></div>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" id="nav-logo">YU.</a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#skills" id="nav-skills">Skills</a></li>
+      <li><a href="#experience" id="nav-experience">Experience</a></li>
+      <li><a href="#projects" id="nav-projects">Projects</a></li>
+      <li><a href="#contact" id="nav-contact" class="nav-cta">Hire Me</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Text -->
+      <div class="hero-text">
+        <div class="hero-badge" style="font-family:'Fira Code', monospace; letter-spacing:0.05em;">
+          <span class="dot" aria-hidden="true"></span>
+          SYS_STATUS: SECURE // OPEN_TO_OFFERS
+        </div>
+
+        <h1 class="hero-name gradient-text">Yasin Ullakhan A</h1>
+        <p class="hero-title">
+          I'm a <span id="typed-role">Cyber Security Student</span>
+        </p>
+        <p class="hero-desc">
+          I build games, simulations, and security-focused software that push the boundaries of what's possible.
+          From interactive digital worlds to real-world threat analysis — I create things that matter.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" id="view-work-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            [DECRYPT_WORK]
+          </a>
+          <a href="#contact" class="btn-secondary" id="contact-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            [INITIATE_CONTACT]
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" id="stat-years">1+</div>
+            <div class="stat-label">Years Coding</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-projects">10+</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-clients">1</div>
+            <div class="stat-label">Internship</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="avatar-wrapper">
+          <div class="avatar-ring"></div>
+          <img src="assets/avatar.png" alt="Yasin Ullakhan A" class="avatar-img" id="profile-avatar" />
+        </div>
+
+        <div class="avatar-card avatar-card-1">
+          <span class="card-icon">🛡️</span> Cyber Security
+        </div>
+        <div class="avatar-card avatar-card-2">
+          <span class="card-icon">🎮</span> Game Developer
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════ -->
+  <section id="about" aria-label="About Me">
+    <div class="about-grid">
+      <!-- Left: Text -->
+      <div class="about-text reveal">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Building Digital<br /><span class="gradient-text">Worlds & Defenses</span></h2>
+        <p class="section-subtitle">
+          I'm Yasin — a Computer Application student and Cyber Security enthusiast based in Chennai, India.
+          I have a rare dual passion: I build immersive games and simulations by day, and study how to break (and
+          defend) systems by night.
+        </p>
+        <p class="section-subtitle" style="margin-top:16px;">
+          Whether it's crafting a physics simulation, designing a game mechanic from scratch, or analysing
+          vulnerabilities —
+          I bring the same relentless curiosity to everything I touch. I believe the best security professionals are the
+          ones who can think like builders.
+        </p>
+
+        <div class="about-qualities">
+          <div class="quality-item">
+            <span class="icon">🎮</span> Game Developer
+          </div>
+          <div class="quality-item">
+            <span class="icon">🛡️</span> Cyber Security
+          </div>
+          <div class="quality-item">
+            <span class="icon">⚙️</span> Simulation Builder
+          </div>
+          <div class="quality-item">
+            <span class="icon">💡</span> Creative Thinker
+          </div>
+          <div class="quality-item">
+            <span class="icon">🔍</span> Detail Oriented
+          </div>
+          <div class="quality-item">
+            <span class="icon">⚡</span> Fast Learner
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Info Cards -->
+      <div class="about-info-cards">
+        <div class="info-card terminal-card reveal reveal-delay-1">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">education_credentials.log</div>
+            <div class="terminal-status">SECURE</div>
+          </div>
+          <div style="padding: 20px 24px;">
+            <div class="info-card-title">
+              <span class="icon">🎓</span> Education
+            </div>
+            <p><strong style="color:var(--text-primary)">Bachelor of Computer Application</strong><br />
+              St. Joseph's University, Chennai — 2024 – 2027<br />
+              Focus: Cyber Security, Software Development & Applied Computing.</p>
+          </div>
+        </div>
+
+        <div class="info-card terminal-card reveal reveal-delay-2">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">location_recon.dat</div>
+            <div class="terminal-status">SECURE</div>
+          </div>
+          <div style="padding: 20px 24px;">
+            <div class="info-card-title">
+              <span class="icon">📍</span> Location & Availability
+            </div>
+            <p>Based in <strong style="color:var(--text-primary)">Chennai, Tamil Nadu, India</strong>.<br />
+              Open to remote internships, freelance work, and cyber security opportunities worldwide.</p>
+          </div>
+        </div>
+
+        <div class="info-card terminal-card reveal reveal-delay-3">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">achievements_manifest.sys</div>
+            <div class="terminal-status">SECURE</div>
+          </div>
+          <div style="padding: 20px 24px;">
+            <div class="info-card-title">
+              <span class="icon">🏆</span> Highlights
+            </div>
+            <p>
+              • Cyber Security Internship<br />
+              • Game & Simulation Developer<br />
+              • BCA Student — St. Joseph's University<br />
+              • Active open-source builder on GitHub
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS SECTION
+  ══════════════════════════════════════ -->
+  <section id="skills" aria-label="Skills">
+    <div class="skills-container">
+      <div class="skills-header reveal">
+        <p class="section-label">Expertise</p>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+        <p class="section-subtitle">A snapshot of the tools and disciplines I work with to build, break, and defend.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Cyber Security -->
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon icon-blue">🛡️</div>
+            Cyber Security
+          </div>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Network Security</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Ethical Hacking / Pen Testing</span>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:65%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Linux & CLI Tools</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:78%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">OSINT & Threat Analysis</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game & Simulation Dev -->
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon icon-purple">🎮</div>
+            Game & Simulation Dev
+          </div>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Game Design & Logic</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Physics Simulation</span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:72%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Python / C++</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript / Web Games</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon icon-cyan">🛠️</div>
+            Tools & Platforms
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Kali Linux</span>
+            <span class="tech-tag">Wireshark</span>
+            <span class="tech-tag">Nmap</span>
+            <span class="tech-tag">Metasploit</span>
+            <span class="tech-tag">Git / GitHub</span>
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">HTML / CSS / JS</span>
+            <span class="tech-tag">Burp Suite</span>
+            <span class="tech-tag">Unity (basics)</span>
+            <span class="tech-tag">Pygame</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon icon-green">🧠</div>
+            Soft Skills
+          </div>
+          <div class="skill-bars">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Problem Solving</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Creative Thinking</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Self-Learning</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Adaptability</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE SECTION
+  ══════════════════════════════════════ -->
+  <section id="experience" aria-label="Work Experience">
+    <div class="exp-container">
+      <div class="exp-header reveal">
+        <p class="section-label">Career</p>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-subtitle">My professional journey — early, focused, and growing fast.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Internship -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="exp-card terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div class="terminal-title">internship_report.cfg</div>
+              <div class="terminal-status">SECURE</div>
+            </div>
+            <div style="padding: 20px 24px;">
+              <div class="exp-top">
+                <div class="exp-role">Cyber Security Intern</div>
+                <div class="exp-period">2026</div>
+              </div>
+              <div class="exp-company">🛡️ Cyber Security Firm · Internship</div>
+              <p class="exp-desc">
+                Gained hands-on experience in vulnerability assessment, network monitoring, and threat analysis.
+                Assisted in identifying and documenting security weaknesses in client systems.
+                Learned to work with industry-standard security tools in a real-world environment.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">Network Security</span>
+                <span class="exp-tag">Pen Testing</span>
+                <span class="exp-tag">Kali Linux</span>
+                <span class="exp-tag">Wireshark</span>
+                <span class="exp-tag">OSINT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education as timeline entry -->
+        <div class="timeline-item purple reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="exp-card terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div class="terminal-title">academic_transcript.dat</div>
+              <div class="terminal-status">SECURE</div>
+            </div>
+            <div style="padding: 20px 24px;">
+              <div class="exp-top">
+                <div class="exp-role">Bachelor of Computer Application</div>
+                <div class="exp-period">2024 – 2027</div>
+              </div>
+              <div class="exp-company">🎓 St. Joseph's University, Chennai · Full-time</div>
+              <p class="exp-desc">
+                Studying Computer Application with a strong focus on Cyber Security, software development, and applied
+                computing.
+                Actively building projects in game development and simulation alongside academic coursework.
+                Cultivating a deep understanding of both offensive and defensive security concepts.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">BCA</span>
+                <span class="exp-tag">Cyber Security</span>
+                <span class="exp-tag">Software Dev</span>
+                <span class="exp-tag">Data Structures</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Self-built Projects -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="exp-card terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <div class="terminal-title">independent_dev.sys</div>
+              <div class="terminal-status">ACTIVE</div>
+            </div>
+            <div style="padding: 20px 24px;">
+              <div class="exp-top">
+                <div class="exp-role">Independent Developer</div>
+                <div class="exp-period">2026 – Present</div>
+              </div>
+              <div class="exp-company">🎮 Self-directed · Game & Simulation Projects</div>
+              <p class="exp-desc">
+                Independently building games, physics simulations, and interactive software projects.
+                Exploring procedural generation, game mechanics, and real-time simulation systems.
+                Publishing work openly on GitHub and continuously expanding technical scope.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">Python</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">Game Design</span>
+                <span class="exp-tag">Simulation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS SECTION
+  ══════════════════════════════════════ -->
+  <section id="projects" aria-label="Projects">
+    <div class="projects-container">
+      <div class="projects-header reveal">
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">A selection of games, simulations, and security tools I've built from scratch.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-1">🎮</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj1-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">Game Project</div>
+              <span class="project-status status-live">● Active</span>
+            </div>
+            <p class="project-desc">
+              An original game built from the ground up — featuring custom mechanics, interactive gameplay, and
+              handcrafted logic. No engine shortcuts, pure code.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Pygame</span><span>Game Logic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-2">⚙️</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj2-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">Physics Simulation</div>
+              <span class="project-status status-live">● Active</span>
+            </div>
+            <p class="project-desc">
+              A real-time simulation engine that models physical systems — gravity, collisions, fluid dynamics — built
+              to be both accurate and visually compelling.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Physics Engine</span><span>Simulation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-3">🛡️</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj3-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">Security Tool</div>
+              <span class="project-status status-dev">◐ In Dev</span>
+            </div>
+            <p class="project-desc">
+              A cyber security utility built during internship experience — designed for network scanning, vulnerability
+              detection, or OSINT reconnaissance.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Networking</span><span>Security</span><span>CLI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-4">🌐</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj4-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">Web Application</div>
+              <span class="project-status status-completed">✓ Completed</span>
+            </div>
+            <p class="project-desc">
+              A web-based interactive project showcasing skills in frontend development — clean UI, smooth interactions,
+              and purposeful design.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-5">🤖</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj5-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">AI / Automation Script</div>
+              <span class="project-status status-live">● Active</span>
+            </div>
+            <p class="project-desc">
+              A Python-based automation or AI script that handles repetitive tasks, data processing, or intelligent
+              decision-making using lightweight algorithms.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Automation</span><span>Scripting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 — Portfolio itself -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-thumbnail">
+            <div class="project-thumb-bg project-thumb-6">✦</div>
+            <div class="project-overlay">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="project-link-btn"
+                id="proj6-code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <div class="project-name">This Portfolio</div>
+              <span class="project-status status-live">● Live</span>
+            </div>
+            <p class="project-desc">
+              Designed and coded entirely from scratch — no templates, no frameworks. A minimalist dark portfolio that
+              reflects personality, not just code.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-container">
+      <div class="contact-header reveal">
+        <p class="section-label">Let's Connect</p>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have a project, an opportunity, or just want to talk tech? My inbox is always open.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="reveal">
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:8px;">
+            Whether it's a security question, a game collab, or a freelance gig —
+            reach out and I'll get back to you within 24 hours.
+          </p>
+
+          <div class="contact-info-cards">
+            <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="contact-card"
+              id="github-card">
+              <div class="contact-card-icon">⌨️</div>
+              <div class="contact-card-text">
+                <div class="contact-card-label">GitHub</div>
+                <div class="contact-card-value">github.com/yazin-developer</div>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </a>
+
+            <a href="mailto:yasinullakhan4321@gmail.com" class="contact-card" id="email-card">
+              <div class="contact-card-icon">📧</div>
+              <div class="contact-card-text">
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value">yasinullakhan4321@gmail.com</div>
+              </div>
+              <div class="contact-card-arrow">→</div>
+            </a>
+
+            <div class="contact-card" id="location-card" style="cursor:default;">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-text">
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-value">Chennai, Tamil Nadu, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form reveal reveal-delay-1">
+          <div class="form-title">Send a Message ✉️</div>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="form-email">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Project Collaboration" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or idea..."
+                required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="form-submit-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              [TRANSMIT_SECURE_MESSAGE]
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <div class="footer-logo">YU.</div>
+        <div class="footer-tagline">Building worlds. Breaking systems. Defending both.</div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://github.com/yazin-developer" target="_blank" rel="noopener" class="social-btn" title="GitHub"
+          id="footer-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" />
+          </svg>
+        </a>
+        <a href="mailto:yasinullakhan4321@gmail.com" class="social-btn" title="Email" id="footer-email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© <span id="current-year">2026</span> Yasin Ullakhan A. All rights reserved.</div>
+      <div class="footer-made">Made with <span>♥</span> in Chennai</div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" style="
+    position:fixed; bottom:32px; right:32px; z-index:9999;
+    background:rgba(17,24,39,0.95); border:1px solid rgba(34,197,94,0.3);
+    border-radius:12px; padding:14px 20px; display:flex; align-items:center; gap:10px;
+    color:#f1f5f9; font-size:0.9rem; font-weight:500;
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
+    transform:translateY(120%); transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    backdrop-filter:blur(20px);
+  " aria-live="polite">
+    <span style="font-size:1.2rem">✅</span>
+    <span id="toast-msg">Message sent successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
