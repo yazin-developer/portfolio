@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Route Not Found // Yasin Ullakhan A</title>
+  <meta name="description" content="Route not found. Return to Yasin Ullakhan A's cybersecurity & systems portfolio." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#050508" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-body:       #050508;
+      --bg-surface:    #0a0c12;
+      --bg-card:       #0d1017;
+      --border:        rgba(255, 255, 255, 0.06);
+      --border-hover:  rgba(255, 255, 255, 0.12);
+      --border-focus:  rgba(0, 240, 255, 0.4);
+      --text-main:     #e8edf5;
+      --text-muted:    #8892a4;
+      --text-faint:    #555e6e;
+      --cyan:          #00f0ff;
+      --cyan-dim:      rgba(0, 240, 255, 0.08);
+      --cyan-border:   rgba(0, 240, 255, 0.25);
+      --purple:        #a855f7;
+      --green:         #00ff88;
+      --green-dim:     rgba(0, 255, 136, 0.08);
+      --green-border:  rgba(0, 255, 136, 0.25);
+      --red:           #ff4757;
+      --red-dim:       rgba(255, 71, 87, 0.1);
+      --red-border:    rgba(255, 71, 87, 0.3);
+      --font-sans:     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono:     'JetBrains Mono', monospace;
+      --radius-sm:     6px;
+      --radius-md:     10px;
+      --radius-lg:     14px;
+      --radius-full:   9999px;
+      --neo-shadow:    4px 4px 12px rgba(0, 0, 0, 0.6), -2px -2px 8px rgba(255, 255, 255, 0.02);
+      --glow-cyan:     0 0 20px rgba(0, 240, 255, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      color-scheme: dark;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle scan-line overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 240, 255, 0.008) 2px,
+        rgba(0, 240, 255, 0.008) 4px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    :focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ── Navbar ── */
+    nav {
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10, 12, 18, 0.85);
+      backdrop-filter: blur(16px);
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--cyan-border);
+      object-fit: cover;
+    }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 7px 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: 0.25s ease;
+      background: var(--bg-card);
+      box-shadow: var(--neo-shadow);
+    }
+
+    .nav-back:hover {
+      color: var(--cyan);
+      border-color: var(--cyan-border);
+    }
+
+    /* ── Main 404 Content ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .error-container {
+      text-align: center;
+      max-width: 580px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px 32px;
+      box-shadow: var(--neo-shadow);
+      position: relative;
+    }
+
+    .error-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    }
+
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: clamp(5.5rem, 15vw, 8.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      background: linear-gradient(135deg, var(--text-main) 30%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      text-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+    }
+
+    .error-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: var(--red-dim);
+      border: 1px solid var(--red-border);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 24px;
+    }
+
+    .error-title {
+      font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .error-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .error-desc code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan-border);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Action buttons */
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      transition: 0.25s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+      min-height: 44px;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #050508;
+      border-color: var(--cyan);
+      box-shadow: 0 0 14px rgba(0, 240, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #33f5ff;
+      box-shadow: var(--glow-cyan);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      border-color: var(--border);
+      color: var(--text-main);
+      box-shadow: var(--neo-shadow);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--cyan-border);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    /* Quick-nav links */
+    .quick-nav-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .quick-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .quick-link {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      transition: 0.2s ease;
+    }
+
+    .quick-link:hover {
+      color: var(--cyan);
+      border-color: var(--cyan-border);
+      background: var(--cyan-dim);
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 24px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    footer a {
+      color: var(--cyan);
+    }
+
+    @media (max-width: 480px) {
+      .error-container {
+        padding: 36px 20px;
+      }
+
+      .error-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav role="navigation" aria-label="Site navigation">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/avatar.jpg" alt="Yasin Ullakhan A" width="32" height="32" />
+      <span>Yasin Ullakhan A</span>
+    </a>
+    <a href="index.html" class="nav-back" aria-label="Go back to command center">
+      &larr; Return to Base
+    </a>
+  </nav>
+
+  <!-- Main 404 content -->
+  <main>
+    <div class="error-container">
+
+      <div class="error-code" aria-hidden="true">404</div>
+
+      <div class="error-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        [!] ERR_ROUTE_NOT_FOUND // 404
+      </div>
+
+      <h1 class="error-title">Packet Lost in Transmission</h1>
+
+      <p class="error-desc">
+        The requested endpoint <code id="error-path"></code> does not resolve to an active service. Let's redirect you back to the command center.
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary" id="btn-home">
+          Return to Command Center &rarr;
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary" id="btn-contact">
+          Open Secure Channel
+        </a>
+      </div>
+
+      <!-- Quick navigation -->
+      <nav aria-label="Quick directory navigation">
+        <div class="quick-nav-label">Direct Directory Jump</div>
+        <div class="quick-nav">
+          <a href="index.html#about"      class="quick-link">/about</a>
+          <a href="index.html#projects"   class="quick-link">/projects</a>
+          <a href="index.html#skills"     class="quick-link">/arsenal</a>
+          <a href="index.html#notes"      class="quick-link">/lab-notes</a>
+          <a href="index.html#experience" class="quick-link">/timeline</a>
+          <a href="index.html#contact"    class="quick-link">/connect</a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 <a href="index.html">Yasin Ullakhan A</a> · Cybersecurity & Systems Portfolio</p>
+  </footer>
+
+  <script>
+    const pathEl = document.getElementById('error-path');
+    if (pathEl) {
+      const path = window.location.pathname.split('/').pop() || window.location.pathname;
+      pathEl.textContent = path || '/404';
+    }
+  </script>
+
+</body>
+
+</html>
