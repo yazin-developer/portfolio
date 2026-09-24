@@ -5,787 +5,745 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Meta Tags -->
+  <!-- SEO -->
   <title>Yasin Ullakhan A — Cyber Security Student &amp; Systems Developer | Chennai</title>
   <meta name="description"
-    content="Official portfolio of Yasin Ullakhan A — Cyber Security Student and Systems Developer in Chennai, India. Specializing in network vulnerability assessment, Python raw sockets, packet analysis, and 2D physics engines." />
+    content="Yasin Ullakhan A is a Cyber Security student and systems developer based in Chennai, India. Specializing in network security, Python tooling, and 2D simulation physics. Available for internships and junior roles." />
   <meta name="keywords"
-    content="Yasin Ullakhan, Cyber Security, Ethical Hacking, Systems Developer, Python, Network Security, Chennai, Penetration Testing, Scapy, Wireshark, Portfolio" />
+    content="Yasin Ullakhan, Cyber Security, Ethical Hacking, Systems Developer, Python, Network Security, Chennai, Cyber Security Student, Portfolio, Penetration Testing" />
   <meta name="author" content="Yasin Ullakhan A" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="canonical" href="https://yasinullakhan.vercel.app/" />
+  <meta name="theme-color" content="#050508" />
+  <link rel="canonical" href="https://yazin-developer.github.io/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Yasin Ullakhan A — Cyber Security Student &amp; Systems Developer" />
-  <meta property="og:description" content="Personal portfolio of Yasin Ullakhan A — Network Security, Python Tooling, and Simulation Physics." />
+  <meta property="og:description"
+    content="Personal portfolio of Yasin Ullakhan A. Exploring network security, vulnerability assessment, and simulation engines." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yasinullakhan.vercel.app/" />
+  <meta property="og:url" content="https://yazin-developer.github.io/" />
   <meta property="og:image" content="assets/avatar.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yasin Ullakhan A — Cyber Security Student &amp; Systems Developer" />
+  <meta name="twitter:description" content="Personal portfolio — network security, Python tooling, simulation engines." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!-- Google Fonts: Space Grotesk, Geist, Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Main Stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="pure-white-bg">
+<body>
 
-  <!-- Background Layer: Radial Orbs (Item 22) & Dot Grid (Item 23) -->
-  <div class="dot-grid-overlay" aria-hidden="true"></div>
-  <div class="radial-orb orb-purple" aria-hidden="true"></div>
-  <div class="radial-orb orb-cyan" aria-hidden="true"></div>
-  <div class="radial-orb orb-pink" aria-hidden="true"></div>
+  <!-- Mobile menu backdrop -->
+  <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 
-  <!-- NAVIGATION BAR (Liquid Glass Item 8) -->
-  <nav id="navbar" class="liquid-glass-nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo" id="nav-brand-link">
-        <img src="assets/avatar.jpg" alt="Yasin Ullakhan A Avatar" class="nav-avatar-img" width="36" height="36" />
-        <span class="logo-text">Yasin<span class="logo-dot">_Ullakhan</span></span>
+  <!-- ═══════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-wrap">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/avatar.jpg" alt="Yasin Ullakhan A" class="nav-brand-avatar" width="32" height="32" />
+        <span>Yasin_Ullakhan</span>
       </a>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#bento">Architecture</a>
-        <a href="#features">Specializations</a>
-        <a href="#projects">Projects</a>
-        <a href="#demo">Sandbox</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#skills" id="nav-skills">Skills</a></li>
+        <li><a href="#notes" id="nav-notes">Lab Notes</a></li>
+        <li><a href="#experience" id="nav-experience">Experience</a></li>
+        <li><button type="button" class="nav-cv-btn" id="open-cv-nav-btn">📄 Download CV</button></li>
+        <li><a href="#contact" id="nav-contact" class="nav-cta">Get in Touch</a></li>
+      </ul>
 
-      <div class="nav-actions">
-        <button type="button" class="btn btn-cv-trigger" id="open-cv-nav-btn">
-          <i data-lucide="file-text" class="btn-icon"></i> Download CV
-        </button>
-        <a href="#contact" class="btn btn-primary btn-glow">
-          <span>Get in Touch</span>
-          <i data-lucide="arrow-right" class="animated-arrow"></i>
-        </a>
-      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="hero-section" id="hero">
-    <div class="container hero-content">
-      
-      <!-- Rainbow Pill Badge (Item 4, 7, 24, 30) -->
-      <div class="hero-badge-wrap">
-        <div class="rainbow-badge">
-          <span class="badge-emoji">✨</span>
-          <span class="badge-text">Cyber Security Student &amp; Systems Developer • Chennai, India</span>
-          <span class="badge-emoji">🚀</span>
+  <!-- ═══════════════════════════════════════════════════
+       TELEMETRY HUD TICKER BAR
+  ═══════════════════════════════════════════════════ -->
+  <div class="telemetry-bar" aria-hidden="true">
+    <div class="container telemetry-inner">
+      <div class="telemetry-item">
+        <span class="t-label">SYS_STATE:</span>
+        <span class="t-val-green">● ONLINE</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="t-label">GEO_NODE:</span>
+        <span class="t-val">CHENNAI // 13.08°N 80.27°E</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="t-label">CIPHER_SUITE:</span>
+        <span class="t-val">AES_256_GCM // TLSv1.3</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="t-label">SHIELD:</span>
+        <span class="t-val-cyan">ACTIVE_DEFENSE_LEVEL_3</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="t-label">PING:</span>
+        <span class="t-val" id="live-latency">14ms</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <!-- Cyber grid canvas (drawn by JS) -->
+    <canvas id="cyber-grid" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Text -->
+        <div class="hero-content">
+          <div class="hero-system-status">
+            <span class="status-dot"></span>
+            Security System // Online
+          </div>
+
+          <h1 class="hero-heading">
+            Building software.<br />
+            <span class="gradient glitch-hover" data-scramble="Breaking & defending systems.">Breaking &amp; defending systems.</span>
+          </h1>
+
+          <p class="hero-role">
+            Hi, I'm <strong>Yasin Ullakhan A</strong> — a Cyber Security student and systems builder based in Chennai, India.
+          </p>
+
+          <p class="hero-bio">
+            I am a dedicated <strong>Cyber Security Student</strong> and systems builder based in Chennai, India.
+            I spend my days studying network defense, practicing vulnerability assessment on TryHackMe and Hack The Box,
+            and writing tools from scratch in Python and C++. My background in building custom 2D physics simulations
+            gives me a deep appreciation for memory safety, protocol design, and what happens under the hood when code executes.
+          </p>
+
+          <div class="now-card cyber-card">
+            <span class="now-pill">SYS.STATUS</span>
+            <span>📍 Chennai &nbsp;·&nbsp; 🔨 Building a raw-socket packet sniffer in Python &nbsp;·&nbsp; 📚 Solving rooms on TryHackMe</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary" id="hero-view-work">
+              View Projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+              </svg>
+            </a>
+            <button type="button" class="btn btn-secondary" id="open-cv-hero-btn">
+              📄 Download CV
+            </button>
+            <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+              Contact &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Portrait Card & Cyber Command Terminal -->
+        <div class="hero-visual">
+          <div class="hero-portrait-card cyber-card">
+            <div class="portrait-img-wrapper">
+              <img src="assets/avatar.jpg" alt="Portrait of Yasin Ullakhan A, Cyber Security Student" class="portrait-img" id="hero-avatar-img" width="400" height="400" loading="eager" />
+            </div>
+            <div class="portrait-meta">
+              <div>
+                <div class="portrait-name glitch-hover" data-scramble="Yasin Ullakhan A">Yasin Ullakhan A</div>
+                <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">Cyber Security Student</div>
+              </div>
+              <span class="badge" style="font-size:0.72rem;">Chennai, IN</span>
+            </div>
+          </div>
+
+          <!-- Interactive Command Terminal Widget -->
+          <div class="cyber-terminal cyber-card" id="cyber-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">bash — yasin@cmd-center:~ (pts/0)</div>
+              <div class="terminal-badge">LIVE NODE</div>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+              <div class="term-line"><span class="term-dim">Session initialized:</span> <span class="term-cyan">NODE-CHENNAI-01</span> <span class="term-dim">[TLS 1.3]</span></div>
+              <div class="term-line"><span class="term-dim">Type a command or select below:</span></div>
+              <div class="term-line"><span class="term-prompt">yasin@sec:~$</span> <span class="term-cmd">whoami</span></div>
+              <div class="term-res">Yasin Ullakhan A — Cyber Security Student &amp; Systems Developer</div>
+            </div>
+            <div class="terminal-quick-cmds">
+              <span class="term-quick-label">QUICK:</span>
+              <button type="button" class="term-chip" data-cmd="skills">cat skills</button>
+              <button type="button" class="term-chip" data-cmd="projects">ls projects</button>
+              <button type="button" class="term-chip" data-cmd="scan">nmap status</button>
+              <button type="button" class="term-chip" data-cmd="clear">clear</button>
+            </div>
+            <form class="terminal-input-row" id="terminal-form">
+              <span class="term-prompt">yasin@sec:~$</span>
+              <input type="text" id="terminal-input" class="term-input" placeholder="type 'help', 'skills', 'projects'..." autocomplete="off" spellcheck="false" />
+            </form>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Main Title: "It's not X, it's Y" (Item 15) & Em Dash (Item 9) & Harsh Gradients (Item 1) -->
-      <h1 class="hero-title">
-        It’s not just code — <br />
-        <span class="harsh-gradient-text">it’s complete defense.</span> 🛡️
-      </h1>
-
-      <p class="hero-subtitle">
-        Specializing in network vulnerability assessment, raw socket packet analysis in Python, custom security tooling, and 2D simulation physics. Building high-speed, zero-inertia software systems from scratch.
+  <!-- ═══════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════ -->
+  <section id="about" class="reveal" aria-label="About Me">
+    <div class="container">
+      <div class="section-label">Background &amp; Philosophy</div>
+      <h2 class="section-title">The Mindset of a Builder &amp; Breaker</h2>
+      <p class="section-desc">
+        How an early fascination with game mechanics and physics simulations led directly to cybersecurity and systems engineering.
       </p>
 
-      <!-- CTA Buttons with Sparkle Icons (Item 24) & Animated Arrows (Item 25) -->
-      <div class="hero-cta-group">
-        <a href="#terminal-section" class="btn btn-hero-primary btn-glow">
-          <i data-lucide="terminal" class="sparkle-icon"></i>
-          <span>Launch Security Terminal</span>
-          <i data-lucide="arrow-right" class="animated-arrow"></i>
-        </a>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I didn't start my coding journey with standard web tutorials. I started by trying to write custom 2D physics simulations and interactive game mechanics in Python and Pygame — calculating vector dot products, handling impulse collisions, and managing tight gameloops in pure code without game engine shortcuts.
+          </p>
+          <p>
+            Building software at that fundamental layer taught me something invaluable: <strong>software is fragile when you don't understand how state, memory, and inputs interact</strong>.
+          </p>
 
-        <button type="button" class="btn btn-hero-secondary liquid-glass-btn" id="open-cv-hero-btn">
-          <i data-lucide="file-text" class="terminal-icon"></i>
-          <span>View Interactive CV</span>
-        </button>
-      </div>
-
-      <!-- Feature Bullets with Checkmarks (Item 16) & Pastel Badges (Item 30) -->
-      <div class="hero-bullet-bar">
-        <div class="bullet-item">
-          <span class="check-icon">✓</span>
-          <span>Vulnerability Assessment</span>
-          <span class="pastel-badge pastel-mint">Active Analyst</span>
-        </div>
-        <div class="bullet-item">
-          <span class="check-icon">✓</span>
-          <span>Python Raw Sockets &amp; Scapy</span>
-          <span class="pastel-badge pastel-blue">Packet Sniffing</span>
-        </div>
-        <div class="bullet-item">
-          <span class="check-icon">✓</span>
-          <span>2D Physics Engines</span>
-          <span class="pastel-badge pastel-pink">SAT Collision</span>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- INTERACTIVE TERMINAL WINDOW SECTION (Item 14) -->
-  <section class="section-terminal" id="terminal-section">
-    <div class="container">
-      
-      <div class="terminal-window shadow-hyper dark-glass-container">
-        <div class="terminal-header">
-          <div class="terminal-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
+          <div class="about-highlight-box">
+            "You cannot comprehensively fortify a system you don't know how to build from the ground up. The best security practitioners understand the perspective of the developer who wrote the bug."
           </div>
-          <div class="terminal-title">
-            <i data-lucide="terminal" class="title-icon"></i>
-            <span>yasin@sec-node:~ (zsh)</span>
-          </div>
-          <div class="terminal-tabs">
-            <button class="term-tab active" data-tab="tab-logs">whoami.sh</button>
-            <button class="term-tab" data-tab="tab-config">skills.json</button>
-            <button class="term-tab" data-tab="tab-stats">sys_telemetry.log</button>
-          </div>
+
+          <p>
+            Today, as a dedicated <strong>Cyber Security Student</strong>, I channel that exact curiosity into <strong>offensive and defensive cybersecurity</strong>. I audit network protocols, experiment with raw socket sniffers, learn how misconfigurations happen, and write practical security tooling to make systems more resilient.
+          </p>
         </div>
 
-        <div class="terminal-body" id="terminal-screen">
-          <div class="terminal-tab-content active" id="tab-logs">
-            <div class="term-line"><span class="t-prompt">yasin@sec-node:~$</span> <span class="t-cmd">whoami --verbose</span></div>
-            <div class="term-line t-info">[PROFILE] Yasin Ullakhan A | Cyber Security Student &amp; Developer</div>
-            <div class="term-line t-info">[LOCATION] Chennai, Tamil Nadu, India (13.08° N, 80.27° E)</div>
-            <div class="term-line t-success">[EDUCATION] BCA in Cyber Security (2024–2027), St. Joseph's University</div>
-            <div class="term-line t-neon">[SPECIALIZATION] Packet Sniffing, Port Scanners, SAT Collision Math 🔥</div>
-            <div class="term-line t-typing"><span class="t-prompt">yasin@sec-node:~$</span> <span id="typed-text"></span><span class="t-cursor">█</span></div>
+        <div class="about-cards-col">
+          <div class="info-card">
+            <div class="info-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+              <span>Current Education</span>
+            </div>
+            <div class="info-card-title">Cyber Security Student</div>
+            <div class="info-card-subtitle">Undergraduate Degree Program (2024 – 2027)</div>
+            <p class="info-card-text">
+              Focusing on operating system architecture, data structures, network protocols, and secure software development.
+            </p>
           </div>
 
-          <div class="term-line-content" id="tab-config" style="display:none;">
-            <pre class="code-block"><code>{
-  <span class="t-key">"name"</span>: <span class="t-val">"Yasin Ullakhan A"</span>,
-  <span class="t-key">"cyber_security"</span>: [<span class="t-val">"Nmap"</span>, <span class="t-val">"Wireshark"</span>, <span class="t-val">"Burp Suite"</span>, <span class="t-val">"Scapy"</span>, <span class="t-val">"Kali Linux"</span>],
-  <span class="t-key">"languages"</span>: [<span class="t-val">"Python 3"</span>, <span class="t-val">"C++"</span>, <span class="t-val">"C"</span>, <span class="t-val">"JavaScript"</span>, <span class="t-val">"SQL"</span>, <span class="t-val">"Bash"</span>],
-  <span class="t-key">"status"</span>: <span class="t-val">"AVAILABLE FOR INTERNSHIPS &amp; JUNIOR ROLES"</span>
-}</code></pre>
-          </div>
-
-          <div class="term-line-content" id="tab-stats" style="display:none;">
-            <div class="term-stat-grid">
-              <div class="term-stat-card">
-                <div class="stat-lbl">FIREWALL DEFENSE</div>
-                <div class="stat-val text-neon-cyan">ACTIVE LEVEL 3</div>
-              </div>
-              <div class="term-stat-card">
-                <div class="stat-lbl">PACKET LATENCY</div>
-                <div class="stat-val text-neon-pink">0.4 ms</div>
-              </div>
-              <div class="term-stat-card">
-                <div class="stat-lbl">SECURITY SCORE</div>
-                <div class="stat-val text-neon-green">99.8%</div>
-              </div>
+          <div class="info-card">
+            <div class="info-card-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>Practical Labs &amp; Training</span>
+            </div>
+            <p class="info-card-text">
+              Actively solving rooms, understanding web flaws (OWASP Top 10), and analyzing network traffic on hands-on security platforms:
+            </p>
+            <div class="platforms-list">
+              <span class="platform-pill">TryHackMe</span>
+              <span class="platform-pill">Hack The Box</span>
+              <span class="platform-pill">PortSwigger Academy</span>
+              <span class="platform-pill">OverTheWire</span>
+              <span class="platform-pill">Kali Linux Labs</span>
             </div>
           </div>
         </div>
-
-        <div class="terminal-footer">
-          <span class="term-status-pill">● SYSTEM ONLINE — CHENNAI NODE</span>
-          <span class="term-hint">Type <kbd>help</kbd> in terminal or click tabs above</span>
-        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ABOUT & BENTO GRID SECTION (Item 13) -->
-  <section class="section-padding bento-section" id="about">
+  <!-- ═══════════════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════════ -->
+  <section id="projects" class="reveal" aria-label="Projects">
     <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-lavender">
-          <i data-lucide="shield" class="badge-icon"></i> System Architecture
-        </span>
-        <h2 class="section-title">
-          Security &amp; Engineering — <span class="harsh-gradient-text">Without Compromise</span> 🔥
-        </h2>
-        <p class="section-desc">
-          Building resilient security tools, custom multi-threaded scanners, and raw packet analysis tools.
-        </p>
+      <div class="section-label">Case Studies</div>
+      <h2 class="section-title">Projects Built from Scratch</h2>
+      <p class="section-desc">
+        Real tools, network auditors, and physics simulations I've designed and coded.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="project-filter-bar" role="tablist" aria-label="Project Categories">
+        <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true">⚡ All Projects</button>
+        <button type="button" class="filter-pill" data-filter="cyber" role="tab" aria-selected="false">🛡️ Cyber Security</button>
+        <button type="button" class="filter-pill" data-filter="sim" role="tab" aria-selected="false">🎮 Game &amp; Simulation</button>
+        <button type="button" class="filter-pill" data-filter="web" role="tab" aria-selected="false">🌐 Web &amp; Tools</button>
       </div>
 
-      <!-- Bento Grid (Item 13, 11, 20, 28) -->
-      <div class="bento-grid">
-        
-        <!-- Large Card 1 -->
-        <div class="bento-card bento-span-2 liquid-glass-card left-stripe-purple hover-lift">
-          <div class="card-badge-row">
-            <span class="pastel-badge pastel-pink">🔮 Security Auditing</span>
-            <i data-lucide="sparkles" class="card-icon-top"></i>
-          </div>
-          <h3 class="bento-title">Network Vulnerability Assessment &amp; Exposure Analysis</h3>
-          <p class="bento-text">
-            Extensive experience inspecting open ports, auditing outdated service banners, and analyzing packet traffic using Nmap, Wireshark, and Scapy in Python.
-          </p>
-          <div class="bento-visual">
-            <div class="mock-pipeline">
-              <div class="pipe-node active"><i data-lucide="shield"></i> Port Audit</div>
-              <div class="pipe-arrow">➔</div>
-              <div class="pipe-node active"><i data-lucide="cpu"></i> Packet Sniffer</div>
-              <div class="pipe-arrow">➔</div>
-              <div class="pipe-node active"><i data-lucide="zap"></i> Remediation</div>
+      <div class="projects-container" id="projects-list">
+        <!-- Project 1: NetAegis -->
+        <article class="project-entry cyber-card" data-category="cyber">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x01 // SYN_FLOOD_DEFENSE]</div>
+            <span class="project-category-badge">Network Security Tool</span>
+            <h3 class="project-title">NetAegis — Multi-Threaded Port Scanner &amp; CVE Correlator</h3>
+            <p class="project-summary">
+              A high-performance command-line network reconnaissance tool written in Python. Implements TCP SYN scanning across arbitrary subnets, grabs daemon service banners, and cross-references discovered versions against known CVE advisories to help administrators spot vulnerable services quickly.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Avoiding dropped socket handshakes during high-speed scans by architecting a thread pool with dynamic rate-limiting and graceful timeout handling.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">Python 3</span><span class="tag">Scapy</span><span class="tag">Sockets</span><span class="tag">Nmap API</span><span class="tag">CLI</span>
             </div>
           </div>
-        </div>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View NetAegis on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
 
-        <!-- Medium Card 2 -->
-        <div class="bento-card liquid-glass-card left-stripe-neon hover-lift">
-          <div class="card-badge-row">
-            <span class="pastel-badge pastel-mint">⚡ High Speed</span>
-            <i data-lucide="zap" class="card-icon-top"></i>
+        <!-- Project 2: PacketPulse -->
+        <article class="project-entry cyber-card" data-category="cyber">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x02 // RAW_SOCKET_SNIFF]</div>
+            <span class="project-category-badge">Packet Analysis</span>
+            <h3 class="project-title">PacketPulse — Raw-Socket Packet Sniffer &amp; ARP Detector</h3>
+            <p class="project-summary">
+              A lightweight packet inspection utility built in Python using Linux raw sockets (<code>AF_PACKET</code>). It decodes Ethernet frames, IP packet headers, and TCP/UDP flags on the fly. Includes an ARP cache-poisoning detection module that tracks IP-to-MAC drifts across the local network and alerts in real-time.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Parsing binary struct headers (<code>struct.unpack</code>) manually without relying on bulky external capture libraries to keep CPU overhead minimal.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">Python</span><span class="tag">Raw Sockets</span><span class="tag">Binary Structs</span><span class="tag">Linux Networking</span><span class="tag">ARP Security</span>
+            </div>
           </div>
-          <h3 class="bento-title">Multi-Threaded Scanners</h3>
-          <p class="bento-text">
-            Custom port scanners built with Python async &amp; threading primitives.
-          </p>
-          <div class="counter-display">
-            <span class="counter-num" id="live-req-count">65,535</span>
-            <span class="counter-lbl">Ports Scanned / sec</span>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View PacketPulse on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Medium Card 3 -->
-        <div class="bento-card liquid-glass-card left-stripe-cyan hover-lift">
-          <div class="card-badge-row">
-            <span class="pastel-badge pastel-blue">🛡️ Encrypted Vault</span>
-            <i data-lucide="lock" class="card-icon-top"></i>
+        <!-- Project 3: Vortex Physics -->
+        <article class="project-entry cyber-card" data-category="sim">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x03 // SAT_COLLISION_CCD]</div>
+            <span class="project-category-badge">Systems &amp; Simulation</span>
+            <h3 class="project-title">Vortex 2D — Custom Rigid-Body Physics &amp; Kinematics Engine</h3>
+            <p class="project-summary">
+              A 2D rigid-body simulation engine coded from pure mathematical principles in Python. Implements Symplectic Euler numerical integration, custom 2D vector algebra, Separating Axis Theorem (SAT) for convex polygon collision detection, and impulse-based collision response with friction and restitution.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Eliminating numerical drift and object penetration during high-velocity collisions using continuous collision detection (CCD) and iterative impulse solvers.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">Vector Math</span><span class="tag">Rigid-Body Physics</span><span class="tag">Collision Detection</span>
+            </div>
           </div>
-          <h3 class="bento-title">AES-256-GCM Cryptography</h3>
-          <p class="bento-text">
-            Implementation of secure credential vaults and encrypted transmission.
-          </p>
-          <ul class="check-list">
-            <li><span class="check-icon">✓</span> Zero-Knowledge Secret Key Vault</li>
-            <li><span class="check-icon">✓</span> AES-256-GCM Hardware Lock</li>
-          </ul>
-        </div>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2025 – 2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View Vortex 2D on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
 
-        <!-- Large Card 4 -->
-        <div class="bento-card bento-span-2 liquid-glass-card left-stripe-purple hover-lift">
-          <div class="card-badge-row">
-            <span class="pastel-badge pastel-lavender">🎮 Simulation Math</span>
-            <i data-lucide="cpu" class="card-icon-top"></i>
+        <!-- Project 4: EntropyGuard -->
+        <article class="project-entry cyber-card" data-category="cyber">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x04 // SHANNON_ENTROPY_AUDIT]</div>
+            <span class="project-category-badge">Applied Cryptography</span>
+            <h3 class="project-title">EntropyGuard — Password Entropy &amp; Security Auditor</h3>
+            <p class="project-summary">
+              A cryptographic auditor that computes true Shannon entropy rather than crude character counts. It calculates character set cardinality, penalizes sequential and repeating patterns (like "123" or keyboard walks), and scores passwords against NIST SP 800-63B standards while estimating crack times across consumer CPUs and GPU clusters.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Designing pattern-matching algorithms that subtract entropy penalties for dictionary words and l33t-speak substitutions.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">Python</span><span class="tag">Shannon Entropy</span><span class="tag">NIST SP 800-63B</span><span class="tag">Hashing Algorithms</span>
+            </div>
           </div>
-          <h3 class="bento-title">2D Rigid-Body Physics &amp; SAT Collision Engineering</h3>
-          <p class="bento-text">
-            Architected custom 2D simulation physics engines implementing Separating Axis Theorem (SAT) math for precise convex polygon collision detection.
-          </p>
-          <div class="edge-map-preview">
-            <span class="ping-dot" style="top:30%; left:25%;"></span>
-            <span class="ping-dot" style="top:50%; left:65%;"></span>
-            <span class="ping-dot" style="top:70%; left:80%;"></span>
-            <div class="edge-label">● SAT Vector Projection Matrix: Active</div>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View EntropyGuard on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
           </div>
-        </div>
+        </article>
 
+        <!-- Project 5: CyberSim Sandbox -->
+        <article class="project-entry cyber-card" data-category="sim">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x05 // WEB_SANDBOX_SIM]</div>
+            <span class="project-category-badge">Interactive Simulation</span>
+            <h3 class="project-title">CyberSim Sandbox — Interactive Threat &amp; Network Simulator</h3>
+            <p class="project-summary">
+              A browser-based interactive laboratory that simulates network topology routing, firewall packet filtering, and threat mitigation scenarios in real time. Features canvas rendering and dynamic nodes to visualize how packets travel through defended networks.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Crafting high-performance HTML5 Canvas rendering for node topology with dynamic bandwidth meters and packet collision detection.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">JavaScript</span><span class="tag">HTML5 Canvas</span><span class="tag">Simulation</span><span class="tag">Network Topology</span>
+            </div>
+          </div>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View CyberSim Sandbox on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Cyberpunk Portfolio -->
+        <article class="project-entry cyber-card" data-category="web">
+          <div class="project-main">
+            <div class="hud-meta-tag">[0x06 // CMD_CENTER_PORTFOLIO]</div>
+            <span class="project-category-badge">Web Engineering</span>
+            <h3 class="project-title">Command Center — Cybersecurity Portfolio Web App</h3>
+            <p class="project-summary">
+              A custom-built, ultra-fast cybersecurity portfolio web application built with zero dependencies. Integrates a live interactive CLI terminal, telemetry HUD, lab writeup modals, and printable CV/Resume generation.
+            </p>
+            <div class="project-takeaway">
+              <strong>Key Challenge Solved:</strong> Building a rich, responsive interface with high lighthouse performance and zero heavy third-party framework overhead.
+            </div>
+            <div class="project-tech-row">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript ES6+</span><span class="tag">Glassmorphism</span>
+            </div>
+          </div>
+          <div class="project-sidebar">
+            <div><div class="project-stat-label">Timeline</div><div class="project-stat-val">2026</div></div>
+            <div><div class="project-stat-label">Role</div><div class="project-stat-val">Solo Developer</div></div>
+            <div class="project-links">
+              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:0.8rem; padding:8px 14px;" aria-label="View Command Center on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
 
+      <div id="projects-empty" class="empty-state" hidden aria-live="polite">
+        <div class="empty-state-icon">🔧</div>
+        <h3 class="empty-state-title">No Projects Yet</h3>
+        <p class="empty-state-desc">Projects are currently being documented. Check back soon or visit my GitHub profile for the latest work.</p>
+        <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Visit GitHub</a>
+      </div>
     </div>
   </section>
 
-  <!-- 3 FEATURE CARDS IN A ROW SECTION (Item 6, 11, 16, 28) -->
-  <section class="section-padding feature-cards-section" id="features">
+  <!-- ═══════════════════════════════════════════════════
+       SKILLS / TECH STACK
+  ═══════════════════════════════════════════════════ -->
+  <section id="skills" class="reveal" aria-label="Technical Arsenal">
     <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-pink">
-          <i data-lucide="star" class="badge-icon"></i> Technical Specializations
-        </span>
-        <h2 class="section-title">
-          Three Pillars of Excellence — <span class="harsh-gradient-text">Engineered With Precision</span> ⚡
-        </h2>
-        <p class="section-desc">
-          Core technical domains where I specialize in building, auditing, and optimizing software.
-        </p>
+      <div class="section-label">Technical Arsenal</div>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <p class="section-desc">
+        The tools, languages, and security platforms I use day-to-day for building software and conducting security assessments.
+      </p>
+
+      <div class="skills-stack-grid">
+        <!-- Cybersecurity -->
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="stack-title">Cybersecurity</div>
+          </div>
+          <div class="stack-tags">
+            <span class="tag">Vulnerability Assessment</span>
+            <span class="tag">Network Security</span>
+            <span class="tag">Web Security</span>
+            <span class="tag">OWASP Top 10</span>
+            <span class="tag">OSINT Recon</span>
+            <span class="tag">Threat Analysis</span>
+          </div>
+        </div>
+
+        <!-- Programming -->
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="stack-title">Programming</div>
+          </div>
+          <div class="stack-tags">
+            <span class="tag">Python 3</span>
+            <span class="tag">C++</span>
+            <span class="tag">C</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">Bash Scripting</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="stack-card">
+          <div class="stack-card-head">
+            <div class="stack-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+              </svg>
+            </div>
+            <div class="stack-title">Tools &amp; Platforms</div>
+          </div>
+          <div class="stack-tags">
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Burp Suite</span>
+            <span class="tag">Metasploit</span>
+            <span class="tag">Scapy</span>
+            <span class="tag">Hydra</span>
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">Pygame</span>
+            <span class="tag">UFW</span>
+          </div>
+        </div>
       </div>
-
-      <!-- Exactly 3 Feature Cards in a Row (Item 6) -->
-      <div class="three-card-row">
-        
-        <!-- Card 1 -->
-        <div class="feature-card liquid-glass-card left-stripe-purple hover-lift drop-shadow-purple">
-          <div class="feature-icon-wrapper purple-glow">
-            <i data-lucide="cpu" class="feature-icon"></i>
-          </div>
-          <h3 class="feature-title">Systems &amp; Python Raw Sockets 🧠</h3>
-          <p class="feature-desc">
-            Designing low-level network diagnostic utilities in Python 3. Intercepting and decoding TCP/UDP IP headers using Scapy and custom socket buffers.
-          </p>
-          <ul class="feature-check-bullets">
-            <li><span class="check-icon">✓</span> Low-level packet manipulation</li>
-            <li><span class="check-icon">✓</span> Multi-threaded network automation</li>
-            <li><span class="check-icon">✓</span> Asynchronous I/O pipelines</li>
-          </ul>
-          <a href="#projects" class="feature-link">
-            <span>Explore PacketSentinel</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="feature-card liquid-glass-card left-stripe-neon hover-lift drop-shadow-neon">
-          <div class="feature-icon-wrapper neon-glow">
-            <i data-lucide="shield" class="feature-icon"></i>
-          </div>
-          <h3 class="feature-title">Vulnerability Assessment 🛡️</h3>
-          <p class="feature-desc">
-            Auditing web applications and network perimeters against OWASP Top 10 flaws, analyzing port exposures, and generating actionable remediation briefs.
-          </p>
-          <ul class="feature-check-bullets">
-            <li><span class="check-icon">✓</span> Penetration testing workflows</li>
-            <li><span class="check-icon">✓</span> Nmap banner &amp; service enumeration</li>
-            <li><span class="check-icon">✓</span> Wireshark pcap traffic forensics</li>
-          </ul>
-          <a href="#projects" class="feature-link">
-            <span>Inspect HyperScan</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="feature-card liquid-glass-card left-stripe-cyan hover-lift drop-shadow-cyan">
-          <div class="feature-icon-wrapper cyan-glow">
-            <i data-lucide="zap" class="feature-icon"></i>
-          </div>
-          <h3 class="feature-title">Simulation Math &amp; Engines 🚀</h3>
-          <p class="feature-desc">
-            Building 2D physics simulation engines in C++ and JavaScript. Implementing linear algebra, impulse resolution, and SAT polygon intersection algorithms.
-          </p>
-          <ul class="feature-check-bullets">
-            <li><span class="check-icon">✓</span> Separating Axis Theorem (SAT)</li>
-            <li><span class="check-icon">✓</span> Rigid-body kinematics &amp; impulse</li>
-            <li><span class="check-icon">✓</span> Real-time rendering optimization</li>
-          </ul>
-          <a href="#projects" class="feature-link">
-            <span>View Vortex Physics 2D</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
-  <!-- PROJECTS PORTFOLIO GRID -->
-  <section class="section-padding projects-section" id="projects">
+  <!-- ═══════════════════════════════════════════════════
+       SECURITY NOTES
+  ═══════════════════════════════════════════════════ -->
+  <section id="notes" class="reveal" aria-label="Security Notes">
     <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-mint">
-          <i data-lucide="code" class="badge-icon"></i> Featured Engineering
-        </span>
-        <h2 class="section-title">
-          Open Source &amp; Systems Projects — <span class="harsh-gradient-text">Built From Scratch</span> 💎
-        </h2>
-        <p class="section-desc">
-          Key projects showcasing network security tools, physics engines, and encryption utilities.
-        </p>
+      <div class="section-label">Articles &amp; Writeups</div>
+      <h2 class="section-title">Technical Notes &amp; Findings</h2>
+      <p class="section-desc">
+        Short writeups sharing what I've learned from CTF labs, network experiments, and software engineering challenges. Click any note to read.
+      </p>
+
+      <div class="notes-grid" id="notes-grid">
+        <div class="note-card" data-note="arp" role="button" tabindex="0" aria-label="Read note: How ARP Spoofing Works">
+          <div>
+            <div class="note-date">FEBRUARY 2026 · NETWORKING</div>
+            <h3 class="note-title">How ARP Spoofing Works &amp; How I Wrote a Detector in Python</h3>
+            <p class="note-excerpt">ARP is inherently stateless: devices blindly accept unsolicited replies. Here is how attackers intercept traffic, and how tracking IP-to-MAC mapping drifts with raw sockets catches them.</p>
+          </div>
+          <div class="note-read-link" aria-hidden="true">Read Note &rarr;</div>
+        </div>
+
+        <div class="note-card" data-note="physics" role="button" tabindex="0" aria-label="Read note: From Physics Loops to Security">
+          <div>
+            <div class="note-date">JANUARY 2026 · SYSTEMS</div>
+            <h3 class="note-title">From Physics Loops to Security: Why Systems Knowledge Matters</h3>
+            <p class="note-excerpt">Why handcrafting collision mathematics and numerical integration in Python gave me a far deeper intuition for memory bounds, arithmetic overflows, and race conditions than any generic textbook.</p>
+          </div>
+          <div class="note-read-link" aria-hidden="true">Read Note &rarr;</div>
+        </div>
+
+        <div class="note-card" data-note="siem" role="button" tabindex="0" aria-label="Read note: Analyzing auth.log for SSH attacks">
+          <div>
+            <div class="note-date">DECEMBER 2025 · BLUE TEAM</div>
+            <h3 class="note-title">Analyzing /var/log/auth.log to Spot SSH Brute-Force Attacks</h3>
+            <p class="note-excerpt">A breakdown of what a distributed SSH dictionary attack actually looks like in Ubuntu system journals, and how a 60-line Python script can trigger automated iptables bans.</p>
+          </div>
+          <div class="note-read-link" aria-hidden="true">Read Note &rarr;</div>
+        </div>
       </div>
 
-      <div class="projects-grid">
-        
-        <!-- Project 1 -->
-        <div class="project-card liquid-glass-card left-stripe-purple hover-lift">
-          <div class="project-tag-row">
-            <span class="pastel-badge pastel-lavender">Python 3</span>
-            <span class="pastel-badge pastel-pink">Scapy</span>
-            <span class="pastel-badge pastel-mint">Security</span>
-          </div>
-          <h3 class="project-title">PacketSentinel — Raw Socket Traffic Analyzer</h3>
-          <p class="project-desc">
-            A Python-based network packet sniffer and traffic analysis engine. Decodes Ethernet frames, IP headers, TCP/UDP payloads, and flags anomalous traffic patterns in real time.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/yazin-developer/packetsentinel" target="_blank" rel="noopener noreferrer" class="btn btn-project-git">
-              <i data-lucide="github"></i> GitHub Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card liquid-glass-card left-stripe-neon hover-lift">
-          <div class="project-tag-row">
-            <span class="pastel-badge pastel-blue">C++</span>
-            <span class="pastel-badge pastel-lavender">Physics Math</span>
-            <span class="pastel-badge pastel-mint">SAT Algorithm</span>
-          </div>
-          <h3 class="project-title">Vortex-Physics-2D — Rigid-Body Engine</h3>
-          <p class="project-desc">
-            Custom 2D physics simulation engine implementing Separating Axis Theorem (SAT) for convex polygon collision detection, restitution impulses, and rotational inertia.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/yazin-developer/vortex-physics-2d" target="_blank" rel="noopener noreferrer" class="btn btn-project-git">
-              <i data-lucide="github"></i> GitHub Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card liquid-glass-card left-stripe-cyan hover-lift">
-          <div class="project-tag-row">
-            <span class="pastel-badge pastel-pink">Python 3</span>
-            <span class="pastel-badge pastel-blue">AsyncIO</span>
-            <span class="pastel-badge pastel-lavender">Network Security</span>
-          </div>
-          <h3 class="project-title">HyperScan-Port — Multi-Threaded Port Scanner</h3>
-          <p class="project-desc">
-            Asynchronous multi-threaded port and vulnerability scanner. Capable of probing 65,535 ports in seconds with service banner grabbing and threat level output.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/yazin-developer/hyperscan-port" target="_blank" rel="noopener noreferrer" class="btn btn-project-git">
-              <i data-lucide="github"></i> GitHub Code
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card liquid-glass-card left-stripe-purple hover-lift">
-          <div class="project-tag-row">
-            <span class="pastel-badge pastel-mint">Cryptography</span>
-            <span class="pastel-badge pastel-blue">AES-256-GCM</span>
-            <span class="pastel-badge pastel-pink">CLI Tool</span>
-          </div>
-          <h3 class="project-title">ZeroShield-Vault — Encrypted Key Storage</h3>
-          <p class="project-desc">
-            CLI credential manager and secret key vault built with Python cryptography primitives. Features PBKDF2 key derivation and AES-256-GCM authenticated encryption.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/yazin-developer/zeroshield-vault" target="_blank" rel="noopener noreferrer" class="btn btn-project-git">
-              <i data-lucide="github"></i> GitHub Code
-            </a>
-          </div>
-        </div>
-
+      <div id="notes-empty" class="empty-state" hidden aria-live="polite">
+        <div class="empty-state-icon">📝</div>
+        <h3 class="empty-state-title">No Notes Yet</h3>
+        <p class="empty-state-desc">Lab writeups and security research notes are being drafted. Check back soon for the first article.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- MOCK SECURITY SANDBOX (Item 18: No Real Product Demos) -->
-  <section class="section-padding sandbox-section" id="demo">
+  <!-- ═══════════════════════════════════════════════════
+       EXPERIENCE & EDUCATION
+  ═══════════════════════════════════════════════════ -->
+  <section id="experience" class="reveal" aria-label="Experience">
     <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-blue">
-          <i data-lucide="sparkles" class="badge-icon"></i> Interactive Security Sandbox
-        </span>
-        <h2 class="section-title">
-          Live Mock Security Telemetry — <span class="harsh-gradient-text">No Video Required</span> 🔮
-        </h2>
-        <p class="section-desc">
-          Test interactive security diagnostic modes in real time.
-        </p>
-      </div>
+      <div class="section-label">Journey</div>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <p class="section-desc">My formal academic progression, internship training, and independent projects.</p>
 
-      <!-- Mock Application Canvas -->
-      <div class="mock-sandbox-container liquid-glass-card drop-shadow-purple">
-        <div class="sandbox-toolbar">
-          <div class="sandbox-status">
-            <span class="pulse-green">● LIVE AUDIT SIMULATION — CHENNAI NODE</span>
-          </div>
-          <div class="sandbox-controls">
-            <button class="sandbox-btn active" id="btn-mode-fast">🚀 Turbo Scan Mode</button>
-            <button class="sandbox-btn" id="btn-mode-secure">🛡️ Deep Packet Audit</button>
-            <button class="sandbox-btn" id="btn-mode-quantum">🔮 Quantum Vault</button>
+      <div class="timeline-wrap">
+        <div class="timeline-row">
+          <div class="timeline-period">2026</div>
+          <div>
+            <h3 class="timeline-title">Cyber Security Intern</h3>
+            <div class="timeline-org">Cyber Security Firm · Professional Internship</div>
+            <p class="timeline-desc">Gained practical experience conducting vulnerability audits and network mapping across simulated client testbeds. Documented open port exposures, weak credentials, and outdated service banners, assisting senior engineers with remediation reports.</p>
           </div>
         </div>
 
-        <div class="sandbox-body">
-          <div class="sandbox-metric-row">
-            <div class="metric-box">
-              <span class="m-title">Analyzed Packets</span>
-              <span class="m-val text-neon-cyan" id="metric-threads">65,535</span>
-            </div>
-            <div class="metric-box">
-              <span class="m-title">Throughput Rate</span>
-              <span class="m-val text-neon-pink" id="metric-tp">1.4 GB/s</span>
-            </div>
-            <div class="metric-box">
-              <span class="m-title">Security Health</span>
-              <span class="m-val text-neon-green" id="metric-eff">100.00%</span>
-            </div>
+        <div class="timeline-row">
+          <div class="timeline-period">2024 – 2027</div>
+          <div>
+            <h3 class="timeline-title">Cyber Security Student</h3>
+            <div class="timeline-org">Undergraduate Degree Program · Chennai, India</div>
+            <p class="timeline-desc">Undergraduate coursework focusing on Operating Systems, Computer Networks, Data Structures &amp; Algorithms, Relational Databases, and Cyber Security. Actively building personal software projects alongside academic studies.</p>
           </div>
+        </div>
 
-          <!-- Mock Chart Graphic -->
-          <div class="mock-chart-box">
-            <div class="chart-header">
-              <span>Real-Time Packet Inspection Stream</span>
-              <span class="pastel-badge pastel-mint">Updated Live</span>
-            </div>
-            <div class="chart-bars" id="chart-bars">
-              <div class="bar" style="height: 55%;"></div>
-              <div class="bar" style="height: 75%;"></div>
-              <div class="bar" style="height: 85%;"></div>
-              <div class="bar" style="height: 60%;"></div>
-              <div class="bar highlight-bar" style="height: 98%;"></div>
-              <div class="bar" style="height: 80%;"></div>
-              <div class="bar" style="height: 90%;"></div>
-              <div class="bar" style="height: 65%;"></div>
-              <div class="bar" style="height: 85%;"></div>
-            </div>
+        <div class="timeline-row">
+          <div class="timeline-period">2025 – Present</div>
+          <div>
+            <h3 class="timeline-title">Independent Developer &amp; Open Source Builder</h3>
+            <div class="timeline-org">GitHub Community · Self-Directed</div>
+            <p class="timeline-desc">Designing standalone utilities in Python, simulation engines, and security scripts. Regularly publishing code, documenting findings, and expanding offensive/defensive competencies.</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- TESTIMONIALS & MENTOR RECOMMENDATIONS (Item 12) -->
-  <section class="section-padding testimonials-section" id="testimonials">
+  <!-- ═══════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════ -->
+  <section id="contact" class="reveal" aria-label="Contact">
     <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-mint">
-          <i data-lucide="star" class="badge-icon"></i> Peer &amp; Mentor Reviews
-        </span>
-        <h2 class="section-title">
-          Recommendations &amp; Feedback — <span class="harsh-gradient-text">Verified Proof</span> 🌟
-        </h2>
-        <p class="section-desc">
-          What faculty, security team leads, and peers say about my engineering work.
-        </p>
+      <div class="contact-header-status">
+        <span class="status-dot"></span>
+        Secure Connection // Status: Ready
       </div>
 
-      <!-- 3 Fake Testimonial / Recommendation Cards (Item 12) -->
-      <div class="testimonials-grid">
-        
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card liquid-glass-card left-stripe-purple hover-lift">
-          <div class="star-rating">⭐⭐⭐⭐⭐</div>
-          <p class="quote-text">
-            “Yasin demonstrates rare depth in raw socket programming and network vulnerability analysis. His PacketSentinel tool showed exceptional code architecture.”
-          </p>
-          <div class="user-info">
-            <div class="user-avatar avatar-purple">AK</div>
-            <div class="user-meta">
-              <h4 class="user-name">Dr. Anand Kumar</h4>
-              <p class="user-role">Professor of Computer Networks — Chennai</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card liquid-glass-card left-stripe-neon hover-lift">
-          <div class="star-rating">⭐⭐⭐⭐⭐</div>
-          <p class="quote-text">
-            “During his security internship, Yasin audited complex network perimeters quickly and delivered clean, actionable vulnerability reports.”
-          </p>
-          <div class="user-info">
-            <div class="user-avatar avatar-cyan">RS</div>
-            <div class="user-meta">
-              <h4 class="user-name">Rohan Sharma</h4>
-              <p class="user-role">Senior Security Analyst — SecOps Cyber Firm</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card liquid-glass-card left-stripe-cyan hover-lift">
-          <div class="star-rating">⭐⭐⭐⭐⭐</div>
-          <p class="quote-text">
-            “Building a 2D physics collision engine with SAT math from scratch requires deep mathematical precision. Yasin's Vortex-Physics-2D is top notch.”
-          </p>
-          <div class="user-info">
-            <div class="user-avatar avatar-pink">KS</div>
-            <div class="user-meta">
-              <h4 class="user-name">Karthik S.</h4>
-              <p class="user-role">Lead Systems Architect — Chennai Tech Community</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 3 SERVICES & ENGAGEMENT TIERS (Item 17) -->
-  <section class="section-padding pricing-section" id="services">
-    <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-lavender">
-          <i data-lucide="zap" class="badge-icon"></i> Collaborative Services
-        </span>
-        <h2 class="section-title">
-          Engagement Packages — <span class="harsh-gradient-text">Engineering Services</span> 💎
-        </h2>
-        <p class="section-desc">
-          Available for cybersecurity internships, project collaboration, and custom tools development.
-        </p>
-      </div>
-
-      <!-- 3 Service Tiers (Item 17) -->
-      <div class="pricing-grid">
-        
-        <!-- Tier 1: Vulnerability Audit -->
-        <div class="pricing-card liquid-glass-card left-stripe-purple hover-lift">
-          <div class="tier-header">
-            <span class="pastel-badge pastel-lavender">Security Audit</span>
-            <h3 class="tier-name">Vulnerability Assessment</h3>
-            <div class="tier-price">
-              <span class="currency">Level</span><span class="amount">01</span><span class="period">/ Audit</span>
-            </div>
-            <p class="tier-desc">Network port exposure scanning, service banner auditing, and threat report drafting.</p>
-          </div>
-          <ul class="pricing-bullets">
-            <li><span class="check-icon">✓</span> Nmap Port &amp; Service Probing</li>
-            <li><span class="check-icon">✓</span> Wireshark Traffic Analysis</li>
-            <li><span class="check-icon">✓</span> OWASP Top 10 Vulnerability Scan</li>
-            <li><span class="check-icon">✓</span> Actionable Remediation Brief</li>
-          </ul>
-          <a href="#contact" class="btn btn-pricing-secondary">
-            <span>Request Audit</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Tier 2: Pro Custom Tooling (Popular with Rainbow Border Item 4) -->
-        <div class="pricing-card liquid-glass-card popular-rainbow-card hover-lift">
-          <div class="popular-ribbon">
-            <span class="rainbow-badge">✨ MOST REQUESTED ✨</span>
-          </div>
-          <div class="tier-header">
-            <span class="pastel-badge pastel-pink">Systems Dev</span>
-            <h3 class="tier-name">Custom Python Tooling</h3>
-            <div class="tier-price">
-              <span class="currency">Level</span><span class="amount">02</span><span class="period">/ Project</span>
-            </div>
-            <p class="tier-desc">Custom multi-threaded socket tools, automated packet sniffers, and CLI security tools.</p>
-          </div>
-          <ul class="pricing-bullets">
-            <li><span class="check-icon">✓</span> Python Raw Socket Engineering</li>
-            <li><span class="check-icon">✓</span> Asynchronous Multi-threaded Scanners</li>
-            <li><span class="check-icon">✓</span> Scapy Packet Automation Scripting</li>
-            <li><span class="check-icon">✓</span> AES-256 Key Vault Integration</li>
-            <li><span class="check-icon">✓</span> Full GitHub Source Code Access</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary btn-glow btn-full">
-            <i data-lucide="sparkles" class="sparkle-icon"></i>
-            <span>Collaborate on Tooling</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Tier 3: Full Systems Architecture -->
-        <div class="pricing-card liquid-glass-card left-stripe-cyan hover-lift">
-          <div class="tier-header">
-            <span class="pastel-badge pastel-mint">Full-Stack / Physics</span>
-            <h3 class="tier-name">Simulation &amp; Architecture</h3>
-            <div class="tier-price">
-              <span class="currency">Level</span><span class="amount">03</span><span class="period">/ Role</span>
-            </div>
-            <p class="tier-desc">Custom 2D rigid-body collision physics, SAT algorithm engineering, and full-time roles.</p>
-          </div>
-          <ul class="pricing-bullets">
-            <li><span class="check-icon">✓</span> 2D Rigid-Body Physics Math (SAT)</li>
-            <li><span class="check-icon">✓</span> C++ / JavaScript Engine Development</li>
-            <li><span class="check-icon">✓</span> Cybersecurity Internship / Role</li>
-            <li><span class="check-icon">✓</span> Direct Technical Mentorship</li>
-          </ul>
-          <a href="#contact" class="btn btn-pricing-secondary">
-            <span>Hire / Partner</span>
-            <i data-lucide="arrow-right" class="animated-arrow"></i>
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="section-padding contact-section" id="contact">
-    <div class="container">
-      
-      <div class="section-header text-center">
-        <span class="pastel-badge pastel-pink">
-          <i data-lucide="mail" class="badge-icon"></i> Direct Transmission
-        </span>
-        <h2 class="section-title">
-          Let’s Build Secure Systems — <span class="harsh-gradient-text">Get In Touch</span> 📧
-        </h2>
-        <p class="section-desc">
-          Available for Cyber Security internships, systems engineering roles, and open-source projects.
-        </p>
-      </div>
+      <div class="section-label">Connect</div>
+      <h2 class="section-title">Establish Connection</h2>
+      <p class="section-desc">
+        Whether you have an internship opportunity, a project to collaborate on, or just want to discuss cybersecurity and systems programming — I'd love to hear from you.
+      </p>
 
       <div class="contact-grid">
-        <!-- Contact Channels -->
-        <div class="contact-info liquid-glass-card left-stripe-purple">
-          <h3 class="contact-title">Contact Channels</h3>
-          <p class="contact-text">Feel free to reach out directly via email or GitHub.</p>
-
-          <div class="info-item">
-            <i data-lucide="mail" class="info-icon"></i>
+        <div class="contact-info-block">
+          <a href="mailto:yasinullakhan4321@gmail.com" class="contact-channel" id="channel-email" aria-label="Send email to yasinullakhan4321@gmail.com">
+            <div class="channel-icon" aria-hidden="true">📧</div>
             <div>
-              <span class="info-label">Direct Email</span>
-              <a href="mailto:yasinullakhan4321@gmail.com" class="info-val">yasinullakhan4321@gmail.com</a>
+              <div class="channel-title">Direct Email</div>
+              <div class="channel-val">yasinullakhan4321@gmail.com</div>
             </div>
-          </div>
+          </a>
 
-          <div class="info-item">
-            <i data-lucide="github" class="info-icon"></i>
-            <div>
-              <span class="info-label">GitHub Repository</span>
-              <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="info-val">github.com/yazin-developer</a>
+          <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer" class="contact-channel" id="channel-github" aria-label="Visit GitHub profile">
+            <div class="channel-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
             </div>
-          </div>
-
-          <div class="info-item">
-            <i data-lucide="map-pin" class="info-icon"></i>
             <div>
-              <span class="info-label">Current Location</span>
-              <span class="info-val">Chennai, Tamil Nadu, India</span>
+              <div class="channel-title">GitHub</div>
+              <div class="channel-val">github.com/yazin-developer</div>
+            </div>
+          </a>
+
+          <div class="contact-channel" style="cursor:default;" aria-label="Location: Chennai, Tamil Nadu, India">
+            <div class="channel-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="channel-title">Location</div>
+              <div class="channel-val">Chennai, Tamil Nadu, India</div>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form-card liquid-glass-card left-stripe-cyan">
-          <form id="contact-form" novalidate>
+        <div class="contact-form">
+          <div id="form-success-banner" class="form-success-banner" hidden role="status" aria-live="polite">
+            <span class="form-success-icon">✅</span>
+            <div>
+              <strong>Transmission successful.</strong>
+              <p>Thanks for reaching out — I'll respond shortly.</p>
+            </div>
+          </div>
+
+          <form id="contact-form" novalidate autocomplete="on">
             <div class="form-group">
-              <label class="form-label" for="form-name">Your Full Name *</label>
-              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Vance" required />
+              <label class="form-label" for="form-name">Your Name <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" aria-describedby="error-name" aria-required="true" />
+              <span id="error-name" class="form-error" role="alert" aria-live="polite"></span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="form-email">Your Email *</label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required />
+              <label class="form-label" for="form-email">Your Email <span class="form-required" aria-hidden="true">*</span></label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" aria-describedby="error-email" aria-required="true" />
+              <span id="error-email" class="form-error" role="alert" aria-live="polite"></span>
             </div>
             <div class="form-group">
-              <label class="form-label" for="form-message">Message *</label>
-              <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Tell me about your internship opportunity, security audit, or project..." required></textarea>
+              <label class="form-label" for="form-message">Message <span class="form-required" aria-hidden="true">*</span></label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your project, internship opportunity, or idea..." required aria-describedby="error-message" aria-required="true"></textarea>
+              <span id="error-message" class="form-error" role="alert" aria-live="polite"></span>
             </div>
-            <button type="submit" class="btn btn-primary btn-glow btn-full" id="form-submit-btn">
-              <span>Transmit Message</span>
-              <i data-lucide="arrow-right" class="animated-arrow"></i>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width:100%; justify-content:center;">
+              Transmit Message &rarr;
             </button>
           </form>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- INTERACTIVE RESUME / CV MODAL -->
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div style="font-weight:600; color:var(--text-main);">Yasin Ullakhan A</div>
+        <div style="margin-top:4px; font-family:var(--font-mono); font-size:0.78rem;">Designed and coded from scratch with HTML, CSS &amp; JavaScript.</div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#notes">Notes</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Note Modal -->
+  <div id="note-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div id="modal-content-area" class="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Resume / CV Modal -->
   <div id="cv-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
-    <div class="modal-box cv-modal-box dark-glass-container">
+    <div class="modal-box cv-modal-box">
       <button id="cv-modal-close-btn" class="modal-close-btn" aria-label="Close CV dialog">&times;</button>
       <div class="cv-document" id="cv-document">
         <div class="cv-header">
@@ -807,7 +765,7 @@
           <section class="cv-sec">
             <h2 class="cv-sec-title">Education</h2>
             <div class="cv-entry">
-              <div class="cv-entry-head"><strong>Bachelor of Computer Application (BCA) — Cyber Security</strong> <span class="cv-period">2024 – 2027</span></div>
+              <div class="cv-entry-head"><strong>Bachelor of Computer Application (BCA)</strong> <span class="cv-period">2024 – 2027</span></div>
               <div class="cv-entry-sub">St. Joseph's University, Chennai, India</div>
               <p>Core Focus: Cyber Security, Computer Networks, Operating System Architecture, Data Structures &amp; Applied Cryptography.</p>
             </div>
@@ -847,57 +805,12 @@
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="toast-popup" role="status" aria-live="polite">
+  <!-- Toast -->
+  <div id="toast" role="status" aria-live="polite" aria-atomic="true">
     <span id="toast-icon">✅</span>
-    <span id="toast-msg">Transmission successful! Thanks for reaching out.</span>
+    <span id="toast-msg">Message sent successfully!</span>
   </div>
 
-  <!-- FOOTER (Explicitly NO TOS & NO Privacy Policy Item 26 & 27) -->
-  <footer class="footer-section">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="logo-brand-foot">
-          <img src="assets/avatar.jpg" alt="Yasin Ullakhan A" class="nav-avatar-img" width="32" height="32" />
-          <span class="logo-text">Yasin<span class="logo-dot">_Ullakhan</span></span>
-        </div>
-        <p class="footer-tagline">
-          Cyber Security Student &amp; Systems Developer • Chennai, India. 🚀
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="col-title">Navigation</h4>
-          <a href="#about">About Architecture</a>
-          <a href="#features">Specializations</a>
-          <a href="#projects">Projects</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="col-title">Security Tools</h4>
-          <a href="#terminal-section">Security Terminal</a>
-          <a href="#demo">Interactive Sandbox</a>
-          <a href="#services">Services</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="col-title">Connect</h4>
-          <a href="https://github.com/yazin-developer" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-          <a href="mailto:yasinullakhan4321@gmail.com">Email Direct</a>
-          <a href="#contact">Send Transmission</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container bottom-inner">
-        <p>© 2026 Yasin Ullakhan A. Designed and coded with HTML, CSS &amp; JS.</p>
-        <!-- Notice: Intentionally NO TOS and NO Privacy Policy per items 26 & 27 -->
-        <span class="pastel-badge pastel-lavender">Pure White &amp; Liquid Glass Cyber UI ✨</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
 
